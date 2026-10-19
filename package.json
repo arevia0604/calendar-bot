@@ -1,26 +1,15 @@
-{
-  "name": "calendar",
+﻿{
+  "name": "calendar-bot",
   "version": "1.0.0",
-  "description": "",
+  "type": "module",
+  "<--" "これを追加！",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/arevia0604/calendar-bot.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/arevia0604/calendar-bot/issues"
-  },
-  "homepage": "https://github.com/arevia0604/calendar-bot#readme",
   "dependencies": {
-    "discord.js": "^14.27.0",
-    "dotenv": "^18.0.8"
+    "discord.js": "^14.x.x",
+    "dotenv": "^16.x.x",
+    "express": "^4.x.x"
   }
 }
