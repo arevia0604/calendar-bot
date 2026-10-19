@@ -308,4 +308,4 @@ client.on('interactionCreate', async interaction => {
     await updateCalendarMessage(client, calendarName);
 });
 
-client.login(process.env.DISCORD_TOKEN);
+client.login(TOKEN);
