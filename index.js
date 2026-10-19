@@ -37,7 +37,7 @@ app.listen(PORT, '0.0.0.0', () => {
 // ==========================================
 console.log("=== TOKEN デバッグ開始 ===");
 console.log("型:", typeof process.env.TOKEN);
-console.log("中身が存在するか:", process.env.TOKEN ? "存在する（長さ: " + process.env.TOKEN.length + "文字）" : "❌ 存在しない（undefined または 空）");
+console.log("中身が存在するか:", process.env.DISCORD_TOKEN ? "存在する（長さ: " + process.env.DISCORD_TOKEN.length + "文字）" : "❌ 存在しない（undefined または 空）");
 console.log("=== TOKEN デバッグ終了 ===");
 
 const TOKEN = process.env.TOKEN || process.env.DISCORD_TOKEN;
@@ -54,6 +54,17 @@ const client = new Client({
         GatewayIntentBits.GuildVoiceStates,
     ]
 });
+
+// スラッシュコマンドの自動登録
+async function registerCommands() {
+    try {
+        console.log('スラッシュコマンドを登録中...');
+        await rest.put(Routes.applicationCommands(CLIENT_ID), { body: commands });
+        console.log('スラッシュコマンドの登録が完了しました。');
+    } catch (error) {
+        console.error('コマンド登録エラー:', error);
+    }
+}
 
 const tempChannels = new Set();
 
