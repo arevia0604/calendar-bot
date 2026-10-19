@@ -2,14 +2,13 @@
   "name": "calendar-bot",
   "version": "1.0.0",
   "type": "module",
-  "<--" "これを追加！",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "discord.js": "^14.x.x",
-    "dotenv": "^16.x.x",
-    "express": "^4.x.x"
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
   }
 }
